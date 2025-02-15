@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlueRockClimb App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">   
+        <img src="assets/logo.png" alt="Gym Logo">
+        <h1>BlueRockClimb</h1>
+    </div>
+    <div class="main-container">
+        <div class="form-container">
+            <h2>Prenota la tua Classe</h2>
+            <form class="booking-form" id="booking-form">
+                <input type="text" name="name" placeholder="Nome" required>
+                <input type="text" name="surname" placeholder="Cognome" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <select name="class-type" id="class-type" required placeholder="Livello">
+                    <option value="beginner">Principianti</option>
+                    <option value="intermediate">Intermedi</option>
+                    <option value="advanced">Avanzati</option>
+                </select>
+                <input type="date" name="date" id="date" required>
+                <button type="submit">Prenota</button>
+            </form>
+        </div>
+        <div class="calendar-container">
+            <h2>Classi Disponibili</h2>
+            <div class="calendar" id="calendar">
+                <!-- Calendar will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>

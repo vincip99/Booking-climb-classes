@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlueRockClimb App</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #b8d9f8; /* Blue color */
+        }
+        .logo {
+            width: 300px;
+            height: auto;
+            animation: fadeInOut 3s ease-in-out;
+        }
+        @keyframes fadeInOut {
+            0% { opacity: 0; }
+            50% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="logo-container">
+        <img src="assets/logo.png" alt="Gym Logo" class="logo">
+    </div>
+    <script>
+        console.log("Redirection script running");
+        setTimeout(() => {
+            console.log("Redirecting to booking.html");
+            window.location.href = "booking.html";
+        }, 3000); // Redirect after 3 seconds
+    </script>
+</body>
+</html>
