@@ -118,3 +118,35 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-left: 5px solid #1964a9; /* Blue color */
 }
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+        padding: 1rem;
+    }
+    .form-container, .calendar-container {
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+    .calendar {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+    .header img {
+        margin-bottom: 1rem;
+    }
+    .calendar {
+        grid-template-columns: 1fr;
+    }
+    .booking-form input, .booking-form select, .booking-form button {
+        font-size: 0.875rem;
+        padding: 0.75rem;
+    }
+}
