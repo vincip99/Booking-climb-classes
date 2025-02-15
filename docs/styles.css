@@ -142,6 +142,9 @@ body {
     .header img {
         margin-bottom: 1rem;
     }
+    .main-container {
+        flex-direction: column;
+    }
     .calendar {
         grid-template-columns: 1fr;
     }
