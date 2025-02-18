@@ -1,0 +1,140 @@
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #e0e0e0; /* Fallback color */
+    color: #333;
+    overflow-y: auto; /* Allow vertical scrolling */
+}
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(27, 106, 180, 0.9); /* Semi-transparent blue color */
+    color: #fff;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: calc(100% - 2rem);
+    top: 1rem;
+    left: 1rem;
+    border-radius: 10px;
+    z-index: 1000;
+}
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.header img {
+    max-width: 50px;
+    height: auto;
+    margin-bottom: 0.5rem;
+}
+.header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 1rem;
+}
+.navbar ul li {
+    display: inline;
+}
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease;
+}
+.navbar ul li a:hover,
+.navbar ul li a:focus,
+.navbar ul li a:active {
+    background-color: #145a8a; /* Darker blue color */
+    border-radius: 5px;
+}
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto; /* Adjust height to fit content */
+    text-align: center;
+    padding: 2rem;
+    position: relative; /* Ensure it is above the background slideshow */
+    z-index: 1;
+    flex-wrap: wrap; /* Allow wrapping of canvas containers */
+    margin-top: 100px; /* Add margin to prevent overlap with the navbar */
+}
+.canvas-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.canvas-container img {
+    width: 100%;
+    height: 300px; /* Set a fixed height for the images */
+    object-fit: cover; /* Ensure the images cover the container */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.slideshow-background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 2rem 0; /* Add padding to the top and bottom */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    border-radius: 0px; /* Optional: Add border-radius for rounded corners */
+}
+.slideshow-background img {
+    width: 30%; /* Reduce the width of each image */
+    height: auto;
+    margin: 0 1rem; /* Add margin between images */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.button-container {
+    display: flex;
+    justify-content: center; /* Center the buttons horizontally */
+    gap: 1rem; /* Add space between the buttons */
+    margin-top: 1rem; /* Add space above the buttons */
+}
+.button-container button {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: #1b6ab4; /* Blue color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.button-container button:hover {
+    background-color: #145a8a; /* Darker blue color */
+}
+.logo-animation-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(211, 211, 211, 0.9); /* Light grey background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000; /* Ensure it is above other content */
+}
+.animated-logo {
+    width: 200px;
+    height: auto;
+    animation: fadeIn 1.5s ease-in-out; /* Shorter animation duration */
+}
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}

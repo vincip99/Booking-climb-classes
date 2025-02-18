@@ -1,40 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BlueRockClimb App</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        .logo-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #b8d9f8; /* Blue color */
-        }
-        .logo {
-            width: 300px;
-            height: auto;
-            animation: fadeInOut 3s ease-in-out;
-        }
-        @keyframes fadeInOut {
-            0% { opacity: 0; }
-            50% { opacity: 1; }
-            100% { opacity: 0; }
-        }
-    </style>
+    <link rel="stylesheet" href="homepage.css">
 </head>
 <body>
+    <div class="logo-animation-container">
+        <img src="assets/logo.png" alt="Gym Logo" class="animated-logo">
+    </div>
+    <div class="header">
+        <div class="header-content">
+            <img src="assets/logo.png" alt="Gym Logo">
+            <h1>BlueRockClimb</h1>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#programs">Programs</a></li>
+                <li><a href="booking.html">Booking</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </div>
     <div class="logo-container">
-        <img src="assets/logo.png" alt="Gym Logo" class="logo">
+        <div class="canvas-container">
+            <img src="assets/canvas.jpg" alt="Canvas Picture">
+            <div class="button-container">
+                <button onclick="window.location.href='booking.html'">Prenota</button>
+            </div>
+        </div>
+        <div class="canvas-container">
+            <img src="assets/nome_logo.jpg" alt="Another Canvas Picture">
+            <div class="button-container">
+                <button onclick="window.location.href='#contact'">Contattaci</button>
+            </div>
+        </div>
+    </div>
+    <div class="slideshow-background">
+        <img src="assets/slide1.jpg" alt="Slide 1">
+        <img src="assets/slide2.jpg" alt="Slide 2">
+        <img src="assets/slide3.jpg" alt="Slide 3">
     </div>
     <script>
-        console.log("Redirection script running");
-        setTimeout(() => {
-            console.log("Redirecting to booking.html");
-            window.location.href = "booking.html";
-        }, 3000); // Redirect after 3 seconds
+        window.addEventListener('load', () => {
+            const logoAnimationContainer = document.querySelector('.logo-animation-container');
+            setTimeout(() => {
+                logoAnimationContainer.style.display = 'none';
+            }, 1500); // Hide the logo after 1.5 seconds
+        });
     </script>
 </body>
 </html>
